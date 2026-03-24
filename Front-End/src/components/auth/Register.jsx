@@ -28,14 +28,7 @@ export const Register = () => {
       ...previousData,
       [name]: value,
     }));
-    if(!/[!@#$%^&*()?><+]/.test(formData.password)) {
-      setError("Password must be contain at list one special chararacter");
-      return
-    }
-    if(!/[A-Z]/.test(formData.password)){
-      setError("Password must contain at list one upper letter ");
-      return
-    }
+   
     
   };
   const isMatch =
@@ -44,6 +37,14 @@ export const Register = () => {
     formData.password !== formData.confirmpass;
   
   const handelFormSubmit = (el) => {
+     if(!/[!@#$%^&*()?><+]/.test(formData.password)) {
+      setError("Password must be contain at list one special chararacter");
+      return
+    }
+    if(!/[A-Z]/.test(formData.password)){
+      setError("Password must contain at list one upper letter ");
+      return
+    }
     el.preventDefault();
 
     const data = {
@@ -68,7 +69,7 @@ export const Register = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="flex items-center justify-center w-full h-screen">
         <div className="login-container bg-[#e0e5ec] rounded-[25px] shadow-xl p-7 w-85 text-center">
           <div className="w-20 h-20 mt-0 mx-auto mb-6 bg-[#c4dbfa] rounded-full flext items-center  shadow-xl overflow-hidden">
             <img className="w-full h-full  " src="/Logo-Designing.jpg" alt="" />

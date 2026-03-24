@@ -73,7 +73,7 @@ export const Login = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="flex items-center justify-center w-full h-screen">
         <div className="login-container bg-[#e0e5ec] rounded-[25px] shadow-xl p-7 w-85 text-center">
           <div className="w-20 h-20 mt-0 mx-auto mb-6 bg-[#c4dbfa] rounded-full flext items-center  shadow-xl overflow-hidden">
             <img className="w-full h-full  " src="/Logo-Designing.jpg" alt="" />
@@ -179,14 +179,14 @@ export const Login = () => {
           ) : null}
 
           {isLogin && !isVerificationComplete ? (
-            <Button
+            <button
               className="bg-blue-950 shadow-xl text-white p-3 rounded-full w-full cursor-pointer my-3"
               type="submit"
               onClick={handelSendOtp}
             >
               {" "}
               Send OTP{" "}
-            </Button>
+            </button>
           ) : null}
         </div>
       </div>
