@@ -1,0 +1,20 @@
+export const AUTH_END_POINTS = {
+    LOGIN:"auth/login",
+    REGISTER:"auth/register",
+    LOGOUT:"auth/logout",
+    SEND_OTP:"auth/send-verify-otp",
+    VERIFY_OTP:"auth/verify-account-using-otp",
+    CREATE_THEME:"user/theme/create",
+    UPDATE_THEME:"user/theme/update",
+    GET_THEME:"user/theme/get/",
+    CREATE_PROJECT:"project/create",
+    GET_ALL_PROJECT_BY_USER:"project/get/",
+    UPDATE_PROJECT_BY_ID:"project/update/",
+    DELETE_PROJECT_BY_ID:"project/delete/",
+    CREATE_TASK_IN_PROJECT:"project/create-task/",
+    GET_ALL_USERS:"auth/getAllUser",
+    GET_ALL_TASK_BY_USER_ID:"project/get-task-by/",
+    UPDATE_TASK_BY_PROJECT_ID:"project/update-task/",
+    DELETE_TASK_BY_PROJECT_TASK_ID:"project/delete-task/",
+    UPDATE_NOTIFICATION:"update/notify"
+};

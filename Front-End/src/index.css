@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+.paper{
+  background-color: var(--bg-paper);
+  color: var(--text-primary);
+  font-family: Inter, system-ui, sans-serif;
+}
+.card
+.MuiCard-root {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+}
+
+.btn-theme {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.btn-theme-secondary {
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+}
+h1,h2 {
+  color: var(--text-secondary);
+  font-weight: 800;
+}
+
+/* sidebar */
+/* Sidebar container */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+}
+.sidebar .sidebar-item {
+  background-color: var(--sidebar-bg);
+}
+
+
+/* Sidebar item */
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--sidebar-text);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover */
+.sidebar-item:hover {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--sidebar-hover-text);
+}
+
+/* Active item */
+.sidebar-item.active {
+  background-color: var(--sidebar-active-bg);
+  color: var(--sidebar-active-text);
+}
+
+/* Icons */
+.sidebar-item .sidebar-icon,
+.sidebar-item svg {
+  color: var(--sidebar-icon);
+}
+
+/* Active icon */
+.sidebar-item.active .sidebar-icon,
+.sidebar-item.active svg {
+  color: var(--sidebar-active-text);
+}
+
+/* icons */
+
+.icon {
+  color: var(--icon-default);
+}
+.icon svg{
+  font-size: 1.2rem;
+}
+
+.icon.active {
+  color: var(--icon-active);
+}
+.icon:hover {
+  color: var(--sidebar-hover-icon);
+}
+
+.icon.disabled {
+  color: var(--icon-disabled);
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 6, 8, 0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(247, 243, 243, 0.92);
+}
+
+.task-summary {
+  cursor: all-scroll;
+}
+
+.task-summary button {
+  cursor: pointer !important;
+}
