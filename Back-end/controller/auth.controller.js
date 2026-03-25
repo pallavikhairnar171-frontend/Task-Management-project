@@ -46,7 +46,7 @@ const register = async (req, res) => {
       text: `Welcome ${name} your account has been created with email id:${email}`,
     };
 
-    await trasporter.sendMail(mailUserOption);
+     trasporter.sendMail(mailUserOption);
     return res
       .status(201)
       .json({ succes: true, message: "User register successfully" });
@@ -140,7 +140,7 @@ const sendVerificationCode = async (req, res) => {
       subject: "OPT sent to verifiy account",
       text: `You have recived otp is ${otp} . Please verify your account has been created with email id:${user.email}`,
     };
-    await trasporter.sendMail(mailUserOption);
+     trasporter.sendMail(mailUserOption);
 
     return res.status(202).json({
       succes: true,
