@@ -1,4 +1,5 @@
 import nodeMailer from "nodemailer";
+import { Resend } from "resend";
 const resend = new Resend(process.env.SMTP_PASS);
 // const trasporter = nodeMailer.createTransport({
 // host: process.env.SMTP_HOST,
