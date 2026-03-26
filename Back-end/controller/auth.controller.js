@@ -40,7 +40,7 @@ const register = async (req, res) => {
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
     const mailUserOption = {
-      from: process.env.SENDER_EMAIL_ID,
+      from: "onboarding@resend.dev",
       to: email,
       subject: "Welcome to project",
       text: `Welcome ${name} your account has been created with email id:${email}`,
@@ -135,7 +135,7 @@ const sendVerificationCode = async (req, res) => {
     user.save();
     console.log(process.env.SENDER_EMAIL_ID, user.email);
     const mailUserOption = {
-      from: process.env.SENDER_EMAIL_ID,
+      from: "onboarding@resend.dev",
       to: user.email,
       subject: "OPT sent to verifiy account",
       text: `You have recived otp is ${otp} . Please verify your account has been created with email id:${user.email}`,
