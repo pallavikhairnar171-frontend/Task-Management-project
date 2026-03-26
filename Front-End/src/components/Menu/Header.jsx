@@ -106,7 +106,7 @@ export function Header() {
   };
   const handelSubmitData =  async (formData) => {
      
-    if(theme._id){
+    if(theme?._id){
       const payload ={
         userId:user.user._id,
         themeId:theme._id,
@@ -116,10 +116,10 @@ export function Header() {
       setOpenThemeModal(false)
     }else{
       const payload ={
-        userId:user.user._id,
+        userId:user?.user?._id,
                ...formData
       }
-     
+     console.log()
       await dispatch(createTheme(payload))
       setOpenThemeModal(false)
       console.log("this header component",payload);
